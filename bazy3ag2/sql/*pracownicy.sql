@@ -13,7 +13,7 @@ CREATE TABLE pracownicy (
     id VARCHAR(20) PRIMARY KEY,
     nazwisko VARCHAR(20),
     imie VARCHAR(20),
-    stanowsiko VARCHAR(20),
+    stanowisko VARCHAR(20),
     data_zatrudnienia VARCHAR(23),
     placa NUMERIC,
     premia NUMERIC,
