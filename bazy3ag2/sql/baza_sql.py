@@ -25,6 +25,8 @@ def main(args):
     cur.executemany('INSERT INTO premia VALUES (?, ?)', premia)
     cur.executemany('INSERT INTO pracownicy (id, nazwisko, imie, stanowisko, data_zatrudnienia, placa, id_dzial) VALUES (?, ?, ?, ?, ?, ?, ?)', pracownicy)
     
+    con.commit()
+    
     return 0
 
 if __name__ == '__main__':
