@@ -4,13 +4,14 @@
 #  baza_sql.py
 
 import sqlite3
+
 from dane import *
 
 def main(args):
-    con = sqlite3.connect(':memory:')
+    con = sqlite3.connect('pracownicy.sqlite3')
     cur = con.cursor() #utworzenie kursora
     
-    with open('*pracownicy.sql', 'r') as plik:
+    with open('pracownicy.sql', 'r') as plik:
         cur.executescript(plik.read())
     
     premia = dane_z_pliku('premia.txt')
