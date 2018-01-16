@@ -1,0 +1,3 @@
+Ola,Krasóń,18
+Kamil Niuchu,Dziorek,17
+Chamil,Kara,18
