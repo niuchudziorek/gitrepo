@@ -7,6 +7,9 @@
 
 
 #include <iostream>
+#include <iomanip>
+#include <cstdlib>
+
 
 using namespace std;
 
@@ -47,22 +50,25 @@ float tab1W() {
 }
 
 
-void wypelnij2W(tab, w, k) {
+void wypelnij2W(int **tab, int w, int k) {
     srand(time(NULL));
-    for(int i = 0; i < w; i++) {
-            for(int j = 0; j < k; j++)
+    for(int i = 1; i < w; i++) {
+            for(int j = 1; j < k; j++) {
+                tab[i][j] = i*j;
+                cout << setw(4) << tab[i][j];
+            }
+        cout << endl;
     }
 }
 
 int tab2W() {
-    int w, k, i, j;
+    int w, k, i;
     cout << "Podaj liczbę wierszy i kolumn: ";
     cin >> w >> k;
+    int **tab;
     
     try {
         tab = new int*[w];
-        wprowadz(tab, ile);
-        drukuj(tab, ile);
     } catch(bad_alloc) {
         cout << "Za mało pamięci!";
         return 1;
@@ -86,8 +92,9 @@ wypelnij2W(tab, w, k);
 
 int main(int argc, char **argv)
 {
-    tab1W();
+    //tab1W();
+    tab2W();
     return 0;
 }
 
-q
+
