@@ -11,8 +11,9 @@
 using namespace std;
 
 class Ulamek {
-        int licznik;
-        int mianownik;
+private:
+    int licznik;
+    int mianownik;
 public:
     Ulamek (int, int);
     void zapisz(int, int);
@@ -29,7 +30,7 @@ public:
         
     }
 };
-
+/*
 void Ulamek::zapisz(int l, int m) {
     licznik = l;
     if(m != 0) mianownik = m;
@@ -38,6 +39,8 @@ void Ulamek::zapisz(int l, int m) {
         exit(1);
     }
 }
+
+*/
 
 Ulamek::Ulamek(int l, int m) {
     licznik = l;
