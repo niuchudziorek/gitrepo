@@ -26,7 +26,12 @@ public:
     int get_m() {
         return mianownik;
     }
-    int skracaj() {
+    int skracaj(int l, int m) {
+        while(m != 0)
+            return skracaj(m, l % m);
+        
+    cout << "Skrócony ułamek: " << licznik/l << "/";
+    return mianownik/licznik;
         
     }
 };
@@ -61,7 +66,11 @@ int main(int argc, char **argv)
     ul1.wypisz();
     cout << endl << "2 ułamek:";
     ul2.wypisz();
-	cout << ul1.licznik << endl;
+	
+    int licznik = ul1.get_l();
+    int mianownik = ul1.get_m();
+    cout << ul1.skracaj(licznik,  mianownik);
+    
     return 0;
 }
 
